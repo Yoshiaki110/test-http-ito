@@ -32,6 +32,18 @@ app.delete('/', function(req, res) {
   res.sendStatus(200);
 });
 
+app.delete('/unnecessarydata', function(req, res) {
+  console.log('<>DELETE /unnecessarydata');
+  console.log(req.body);
+  res.sendStatus(200);
+});
+
+app.delete('/errormail', function(req, res) {
+  console.log('<>DELETE /errormail');
+  console.log(req.body);
+  res.sendStatus(200);
+});
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 });
